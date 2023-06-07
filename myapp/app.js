@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send('Go to /number/:num to check if :num is prime or composite')
+})
+
 app.get('/number/:num', (req, res) => {
     let isPrime = "true";
     let num = req.params.num;
